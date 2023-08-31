@@ -61,12 +61,14 @@ public class DD_Util_Ross_Two {
       return a;
    }
    
-      /**
-    Finds the smallest element in a tail range of the array.
-    @param a the array to sort
-   @param from the first position in a to compare
-    @return the position of the smallest element in the
-    range a[from] . . . a[a.length - 1]
+   /* method to find smallest element in the tail range of
+   an array
+   @param arr, the int array to iterate through
+   @param startIndex, an int value representing the index
+   at which to begin the tail range of the array
+   @return smallestIndex, an int value representing the index
+   of the smallest element in the range from arr[startIndex] to
+   arr[arr.length - 1]
    */
    public static int smallest(int[] arr, int startIndex) {
       int arrLength = arr.length;
