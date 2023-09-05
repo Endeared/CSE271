@@ -19,7 +19,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
-public class ZeroSum {
+public class hameyreZeroSum {
 
   public static void main(String[] args) throws IOException {
     // grabbing file names from user
