@@ -77,24 +77,19 @@ public class hameyreZeroSum {
   * of the file
   */
   public static int[] readFileInt(String fileName) throws IOException {
-    try {
-      // trying to open file, grab length based on our first val, then
-      // create a new array based on length and populate it with remaining
-      // vals
-      Scanner thisFile = new Scanner(new File(fileName));
-      int length = thisFile.nextInt();
-      int[] arr = new int[length];
-      
-      for(int i = 0; i < arr.length; i++) {
-        arr[i] = thisFile.nextInt();
-      }
-      
-      // return populated array
-      return arr;
-    } catch (IOException error) {
-      // otherwise, catch and throw error
-      throw error;
+    // trying to open file, grab length based on our first val, then
+    // create a new array based on length and populate it with remaining
+    // vals
+    Scanner thisFile = new Scanner(new File(fileName));
+    int length = thisFile.nextInt();
+    int[] arr = new int[length];
+    
+    for(int i = 0; i < arr.length; i++) {
+      arr[i] = thisFile.nextInt();
     }
+    
+    // return populated array
+    return arr;
   }
   
   /*
