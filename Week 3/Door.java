@@ -1,8 +1,8 @@
 public class Door 
 {
    // instance vars
-   private String state;
-   private String name;
+   private static String state;
+   private static String name;
    
    // constructor
    public Door(String initName, String initState)
@@ -36,5 +36,9 @@ public class Door
    public void close()
    {
       state = "closed"; 
+   }
+   
+   public static String getDetails() {
+      return state + ":" + name;
    }
 }

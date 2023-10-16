@@ -1,8 +1,19 @@
 public class VendingMachine 
 {
+   //Instance variables
    private int numCans;
    private int tokens;
 
+   //Constructor
+   public VendingMachine(){
+   
+   }
+   
+   public VendingMachine(int cans, int tokens){
+      this.numCans = cans;
+      this.tokens = tokens;
+   }
+   //Instance methods
    public void fillUp(int cans) 
    {
       numCans = numCans + cans;

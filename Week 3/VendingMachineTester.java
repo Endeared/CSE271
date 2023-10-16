@@ -1,25 +1,16 @@
-public class VendingMachineTester {
-
-    public static void main(String[] args){
-        VendingMachine machine = new VendingMachine(10, 0, 0);
-        System.out.println("Machine currently has: " + machine.getNumberOfCans() + " cans.");
-        System.out.println("Machine currently has: " + machine.getMoney() + " money.");
-        
-        machine.sellItem();
-        System.out.println("Machine currently has: " + machine.getNumberOfCans() + " cans.");
-        System.out.println("Machine currently has: " + machine.getMoney() + " money.");
-        
-        machine.restock();
-        System.out.println("Machine currently has: " + machine.getNumberOfCans() + " cans.");
-        System.out.println("Machine currently has: " + machine.getMoney() + " money.");
-        
-        machine.changeNumberOfCans(5);
-        System.out.println("Machine currently has: " + machine.getNumberOfCans() + " cans.");
-        System.out.println("Machine currently has: " + machine.getMoney() + " money.");
-        
-        machine.sellItem();
-        System.out.println("Machine currently has: " + machine.getNumberOfCans() + " cans.");
-        System.out.println("Machine currently has: " + machine.getMoney() + " money.");
-    }
-    
+public class VendingMachineTester
+{
+   public static void main(String[] args)
+   {
+      VendingMachine machine = new VendingMachine();
+      machine.fillUp(10); // Fill up with ten cans
+      machine.insertToken();
+      machine.insertToken();
+      System.out.print("Token count: ");
+      System.out.println(machine.getTokenCount());
+      System.out.println("Expected: 2");
+      System.out.print("Can count: ");
+      System.out.println(machine.getCanCount()); 
+      System.out.println("Expected: 8");
+   } 
 }
