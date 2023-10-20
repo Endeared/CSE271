@@ -47,8 +47,10 @@ public class DieTest {
       System.out.println(myDie.getValueAt(5)); // prints 15
       System.out.println(myDie4.getCurrentValue()); // prints 2
       myDie4.rollDie(); // prints nothing - selects random value in list of values in myDie4
+      System.out.println("rolled die"); // prints rolled die, just to indicate our action above
       System.out.println(myDie4.getCurrentValue()); // prints new random value
       myDie4.setFacing(5); // prints nothing - but allows us to set our face without error
+      System.out.println("set new face"); // prints set new face, just to indicate our action above
       
       myDie.getValueAt(25); // invalid, tries to get val outside of range - prints error
       myDie4.setFacing(50); // invalid, tries to set face outside of range - prints error
@@ -58,10 +60,10 @@ public class DieTest {
       System.out.println(myDie.compareDice(myDie2)); // true
       System.out.println(myDie.compareTo(myDie2)); // true
       
-      System.out.println(myDie.compareDieValue(myDie4)); // false - myDie face = 10, myDie4 face = 2
-      System.out.println(myDie.compareQuantityOfSides(myDie3)); // false - myDie sides = 21, myDie3 sides = 6
-      System.out.println(myDie.compareDice(myDie4)); // false - myDie sides and face =/= myDie4 sides and face
-      System.out.println(myDie.compareTo(myDie3)); // false - myDie sides, face, and vals =/= myDie4 sides, face, and vals
+      System.out.println(myDie.compareDieValue(myDie4)); // false
+      System.out.println(myDie.compareQuantityOfSides(myDie3)); // false
+      System.out.println(myDie.compareDice(myDie4)); // false
+      System.out.println(myDie.compareTo(myDie3)); // false
    }
 
 }

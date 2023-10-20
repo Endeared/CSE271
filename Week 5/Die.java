@@ -3,7 +3,7 @@
  * Instructor: Dr. Deepak Dawar
  * Partner: None
  * Course: CSE271
- * Date: 10/8/2023
+ * Date: 10/18/2023
  * Die class, which allows the user to
  create a Die using various constructors
  and perform several methods relating to the Die.
@@ -61,7 +61,7 @@ public class Die {
     */
    public Die(int sides, int min) {
       this.sides = sides;
-      for (int i = min; i < (sides + min + 1); i++) {
+      for (int i = min; i < min + sides; i++) {
          sideValues.add(i);
       }
       this.currentFacing = min;
@@ -114,7 +114,7 @@ public class Die {
       try {
          int thisVal = sideValues.get(sideLocation);
          return thisVal;
-      } catch (Exception error) {
+      } catch (IndexOutOfBoundsException error) {
          System.out.println("Error - that side doesn't exist!");
          return -1;
       }
@@ -139,7 +139,7 @@ public class Die {
     */
    public int rollDie() {
       Random rng = new Random();
-      int randomIndex = rng.nextInt((sideValues.size() - 1) + 1);
+      int randomIndex = rng.nextInt(sideValues.size());
       int arrayVal = sideValues.get(randomIndex);
       this.currentFacing = arrayVal;
       return arrayVal;
@@ -155,7 +155,7 @@ public class Die {
    public void setFacing(int sideLocation) {
       try {
          this.currentFacing = sideValues.get(sideLocation);
-      } catch (Exception error) {
+      } catch (IndexOutOfBoundsException error) {
          System.out.println("Error - that side doesn't exist!");
       }
    }
@@ -190,7 +190,7 @@ public class Die {
     * @return true if sides and values match, otherwise false
     */
    public boolean compareDice(Die d) {
-      return (d.toString().equals(this.toString()));
+      return this.sideValues.equals(d.sideValues);
    }
    
    /**

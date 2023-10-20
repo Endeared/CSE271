@@ -20,7 +20,7 @@
 // imports
 import java.util.ArrayList;
 
-public class DiceTowerTest {
+public class DieTowerTest {
 
    // our main method, where we do all of our testing
    public static void main(String[] args) {

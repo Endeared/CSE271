@@ -3,7 +3,7 @@
  * Instructor: Dr. Deepak Dawar
  * Partner: None
  * Course: CSE271
- * Date: 10/8/2023
+ * Date: 10/18/2023
  * DiceTower class, which allows the user to
  create a DiceTower using various constructors
  and perform several methods relating to the Die.
