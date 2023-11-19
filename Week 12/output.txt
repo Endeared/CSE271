@@ -1,0 +1,4 @@
+Linear Search requested
+Input file is input.txt
+Number of comparisons made: 466544
+Time taken: 11ms, or 0s
