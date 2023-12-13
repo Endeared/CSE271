@@ -56,12 +56,12 @@ public class Hand extends Card implements Comparable {
 	public boolean addCard(Card wonCard) {
 
 		if (wonCard != null) {
-			if (!this.isFull()) {
-				Card temp = new Card(wonCard.getSuit(), wonCard.getRank());
-				hand.add(temp);
-				// this.totalCards++;
-				return true;
-			}
+			// if (!this.isFull()) {
+			Card temp = new Card(wonCard.getSuit(), wonCard.getRank());
+			hand.add(temp);
+			// this.totalCards++;
+			return true;
+			// }
 		}
 		return false;
 	}

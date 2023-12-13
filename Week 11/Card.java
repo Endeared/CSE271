@@ -158,14 +158,14 @@ public class Card implements CardInterface, Comparable {
 			return "Nine";
 		case TEN:
 			return "Ten";
-		case ACE:
-			return "Ace";
 		case KING:
 			return "King";
 		case QUEEN:
 			return "Queen";
 		case JACK:
 			return "Jack";
+      case ACE:
+			return "Ace";
 		default:
 			return Integer.toString(rank);
 		}
